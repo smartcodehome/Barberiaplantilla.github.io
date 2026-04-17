@@ -1,0 +1,303 @@
+body { margin:0; font-family:'Poppins', sans-serif; background:#0d0d0d; color:#fff; overflow-x: hidden; }
+
+header { 
+    height:100vh; 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1') center/cover; 
+    display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; 
+}
+
+h1 { font-family:'Playfair Display', serif; font-size:60px; margin-bottom: 10px; color: gold; }
+
+.btn { 
+    margin-top:20px; padding:15px 40px; background:gold; color:black; 
+    text-decoration:none; border-radius:30px; font-weight: bold; transition: 0.3s;
+}
+.btn:hover { background: #e6c200; transform: scale(1.05); }
+
+section { padding:80px 20px; max-width:1000px; margin:auto; opacity:0; transform:translateY(40px); transition:0.8s; }
+section.show { opacity:1; transform:translateY(0); }
+
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-bottom: 40px; }
+
+.card { background:#1a1a1a; padding:20px; border-radius:15px; border-left: 4px solid gold; }
+.card strong { color: gold; display: block; margin-bottom: 5px; }
+
+/* --- MEJORA DE ESTRELLAS --- */
+.review-form { background: #151515; padding: 30px; border-radius: 20px; }
+input, textarea { 
+    width:100%; padding:12px; margin:10px 0; background: #222; border: 1px solid #333; 
+    color: #fff; border-radius: 8px; box-sizing: border-box;
+}
+
+.rating-wrapper { display: flex; align-items: center; gap: 15px; margin: 15px 0; }
+
+.star-rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; }
+.star-rating input { display: none; }
+.star-rating label { 
+    font-size: 30px; color: #444; cursor: pointer; transition: 0.2s; 
+}
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label { color: gold; }
+
+button { 
+    width: 100%; padding:15px; background:gold; border:none; 
+    cursor:pointer; font-weight: bold; border-radius: 8px; font-size: 16px;
+}
+button:disabled { background: #555; cursor: not-allowed; }
+
+footer { text-align:center; padding:40px; background:#000; color: #555; }
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(13, 13, 13, 0.9); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque elegante */
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo span { color: gold; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: gold; }
+
+/* Botón pequeño dentro de la nav */
+.btn-nav {
+    background: gold;
+    color: #000 !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.btn-nav:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+/* Ajuste para que el contenido no quede oculto bajo la nav */
+header {
+    padding-top: 80px;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+    .nav-links { gap: 15px; }
+    .nav-links a { font-size: 12px; }
+    .logo { font-size: 18px; }
+}
+/* --- ESTILOS DE QUIÉNES SOMOS --- */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 { color: gold; font-family: 'Playfair Display', serif; }
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid gold;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- ESTILOS DE TARJETAS DE SERVICIOS --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: gold;
+}
+
+.service-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-info { padding: 20px; }
+.service-info h3 { color: gold; margin-top: 0; }
+.service-info p { color: #ccc; font-size: 14px; }
+
+.price {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: gold;
+    font-size: 18px;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-image { order: -1; } /* La foto sale arriba en el móvil */
+}
+/* --- FOOTER PROFESIONAL --- */
+.main-footer {
+    background: #050505;
+    padding: 60px 20px 20px;
+    border-top: 2px solid gold;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-info h2 { font-size: 30px; margin-bottom: 15px; }
+
+/* Botones de Redes Sociales Interactivos */
+.social-links { display: flex; gap: 15px; margin-top: 20px; }
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.4s;
+    border: 1px solid #333;
+}
+
+.social-icon:hover {
+    background: gold;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px gold;
+}
+
+/* Estilo de Horarios */
+.footer-hours h3, .footer-contact h3 {
+    color: gold;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.footer-hours ul { list-style: none; padding: 0; }
+
+.footer-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
+    font-size: 14px;
+}
+
+.closed { color: #ff4d4d; font-weight: bold; }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .footer-container { text-align: center; }
+    .social-links { justify-content: center; }
+    .footer-hours li { justify-content: space-around; }
+}
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: gold;
+    text-decoration: none;
+    font-size: 20px; /* Tamaño del icono */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.social-icon:hover {
+    background: gold;
+    color: #000;
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    border-color: #fff;
+}
+
+/* Color específico al pasar el dedo (opcional) */
+.social-icon:hover .fa-instagram { color: #e1306c; }
+.social-icon:hover .fa-whatsapp { color: #25d366; }
+.social-icon:hover .fa-facebook-f { color: #1877f2; }
+/* Al final del hover el icono se vuelve negro por el fondo gold, 
+   pero puedes quitar estas 3 líneas si prefieres que todo sea negro en hover */
