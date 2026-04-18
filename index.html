@@ -1,4 +1,4 @@
-i8<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -26,15 +26,120 @@ i8<!DOCTYPE html>
 
   <h1>Barbería Elite</h1>
   <p>Cortes de autor y estilo clásico</p>
-  <a class="btn" href="https://wa.me/5595981247363?text=Quiero%20agendar%20una%20cita">Agendar Cita</a>
+  <a class="btn" href="https://wa.me/5599999999999?text=Quiero%20agendar%20una%20cita">Agendar Cita</a>
 </header>
+
+<section id="quienes-somos" class="reveal about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>Quiénes Somos</h2>
+      <p>En <strong>Barbería Elite</strong>, no solo cortamos el cabello; esculpimos identidad. Con más de 10 años de trayectoria, combinamos técnicas tradicionales de barbería con las tendencias más modernas para ofrecerte un servicio de excelencia.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Nuestra Barbería">
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="reveal">
+  <h2>Nuestros Servicios</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=500&q=80" alt="Corte de cabello">
+      </div>
+      <div class="service-info">
+        <h3>Corte Elite</h3>
+        <p>Degradados perfectos y asesoría de imagen personalizada.</p>
+        <span class="price">$25</span>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop" alt="Barbero Profesional">
+        <h3>Ritual de Barba</h3>
+        <p>Toalla caliente, aceites esenciales y perfilado a navaja.</p>
+        <span class="price">$15</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="reveal">
   <h2>Reseñas en vivo</h2>
   <div id="reviews" class="services">
     </div>
 
-<section id="quienes-somos" class="reveal about-section">
+  <div class="review-form">
+    <h3>Deja tu reseña</h3>
+    <input type="text" id="name" placeholder="Tu nombre">
+    <textarea id="comment" placeholder="Cuéntanos tu experiencia"></textarea>
+    
+    <div class="rating-wrapper">
+      <span>Puntuación:</span>
+      <div class="star-rating">
+        <input type="radio" name="stars" id="star-5" value="5"><label for="star-5">★</label>
+        <input type="radio" name="stars" id="star-4" value="4"><label for="star-4">★</label>
+        <input type="radio" name="stars" id="star-3" value="3"><label for="star-3">★</label>
+        <input type="radio" name="stars" id="star-2" value="2"><label for="star-2">★</label>
+        <input type="radio" name="stars" id="star-1" value="1"><label for="star-1">★</label>
+      </div>
+    </div>
+    
+    <button id="submit-btn" onclick="addReview()">Publicar Reseña</button>
+  </div>
+</section>
+
+<footer class="main-footer">
+  <div class="footer-container">
+    
+    <div class="footer-info">
+      <h2 class="logo">Elite<span>Barber</span></h2>
+      <p>Elevando el estándar de la barbería clásica en cada corte.</p>
+      <div class="social-links">
+  <a href="https://instagram.com/tu_usuario" class="social-icon" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://facebook.com/tu_pagina" class="social-icon" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://tiktok.com/@tu_usuario" class="social-icon" aria-label="TikTok">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://wa.me/95981247363" class="social-icon" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>
+
+
+    <div class="footer-hours">
+      <h3>Horario de Atención</h3>
+      <ul>
+        <li><span>Lunes - Viernes</span> <span>09:00 - 20:00</span></li>
+        <li><span>Sábado</span> <span>08:00 - 18:00</span></li>
+        <li><span>Domingo</span> <span class="closed">Cerrado</span></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contacto</h3>
+      <p>📍 Av. Principal, Boa Vista - RR</p>
+      <p>📞 +55 95 98124-7363</p>
+      <p>✉️ contacto@elitebarber.com</p>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Barbería Elite. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html><section id="quienes-somos" class="reveal about-section">
   <div class="about-content">
     <div class="about-text">
       <h2>Quiénes Somos</h2>
